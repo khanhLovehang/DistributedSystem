@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1758624583 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<sys/types.h>
+	<pthread.h>
+
