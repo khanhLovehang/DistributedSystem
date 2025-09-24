@@ -1,8 +1,10 @@
 # depslib dependency file v1.0
-1758624583 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\main.c
+1758678806 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\main.c
 	<stdio.h>
 	<stdlib.h>
 	<unistd.h>
 	<sys/types.h>
 	<pthread.h>
+
+1758638073 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\without-lock.c
 
