@@ -1,10 +1,22 @@
 # depslib dependency file v1.0
-1758678806 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\main.c
+1758724334 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\main.c
+
+1758800975 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\without-lock.c
+
+1758851618 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\naive-lock.c
+
+1758854050 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\mutex-lock-banking.c
+	<time.h>
 	<stdio.h>
 	<stdlib.h>
 	<unistd.h>
 	<sys/types.h>
 	<pthread.h>
 
-1758638073 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\without-lock.c
+1758854046 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\fine-locking-bank.c
+
+1758854113 source:d:\3.master\subjects\he_phan_tan\docs\baitap\chuong1\btth\distributedsystem\practice4\deadlocks-test.c
+	<stdio.h>
+	<stdlib.h>
+	<pthread.h>
 

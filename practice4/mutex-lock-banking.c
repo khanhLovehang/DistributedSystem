@@ -6,11 +6,13 @@
 //#include <pthread.h>
 //
 //#define INIT_BALANCE 50
-//#define NUM_TRANS 1000
+//#define NUM_TRANS 10000
 //
 //int balance = INIT_BALANCE;
 //int credits = 0;
 //int debits = 0;
+//
+//pthread_mutex_t mutex;
 //
 //void * transactions(void * args)
 //{
@@ -18,6 +20,7 @@
 //
 //    for(i=0; i<NUM_TRANS; i++)
 //    {
+//        pthread_mutex_lock(&mutex);
 //        //choose a random value
 //        srand(time(NULL));
 //        v = rand() % NUM_TRANS;
@@ -37,6 +40,8 @@
 //            balance = balance - v;
 //            debits = debits + v;
 //        }
+//
+//        pthread_mutex_unlock(&mutex);
 //    }
 //
 //    return 0;
@@ -47,6 +52,10 @@
 //
 //    int n_threads,i;
 //    pthread_t * threads;
+//    struct timespec start, end;
+//    double elapsed;
+//
+//    pthread_mutex_init(&mutex, NULL);
 //
 //    //error check
 //    if(argc < 2)
@@ -68,6 +77,8 @@
 //    //allocate array of thread identifiers
 //    threads = calloc(n_threads, sizeof(pthread_t));
 //
+//    //start timing whole program (only the threaded workload)
+//    clock_gettime(CLOCK_MONOTONIC, &start);
 //    //start all threads
 //    for(i=0; i<n_threads; i++)
 //    {
@@ -80,10 +91,22 @@
 //        pthread_join(threads[i], NULL);
 //    }
 //
+//    // end timing
+//    clock_gettime(CLOCK_MONOTONIC, &end);
+//
+//    // calculate elapsed time in milliseconds
+//    elapsed = (end.tv_sec - start.tv_sec) * 1000.0;
+//    elapsed += (end.tv_nsec - start.tv_nsec) / 1000000.0;
+//
+//    pthread_mutex_destroy(&mutex);
+//
 //    printf("\t Debits:\t%d\n\n", debits);
 //    printf("%d+%d-%d=\t%d\n", INIT_BALANCE,credits,debits,INIT_BALANCE+credits-debits);
 //    printf("\t Balance:\t%d\n", balance);
+//    printf("Total runtime: %.3f ms\n", elapsed);
+//
 //    //free array
 //    free(threads);
 //    return 0;
 //}
+//
